@@ -4,9 +4,15 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
-
-}
-
+  let result = [];
+  for (let i = 0; i < max; i++) {
+    if (Number.isInteger(Math.sqrt(i)) === true) {
+      result.push(i);
+    };
+  };
+  return result;
+};
+getNumbersWithSquareRoots();
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"
 // If the test has all tests passed, switch to the next exercise file
