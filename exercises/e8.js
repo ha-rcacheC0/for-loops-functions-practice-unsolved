@@ -6,6 +6,7 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
+  let greatsBalance = [];
 
 }
 

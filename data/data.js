@@ -8,6 +8,7 @@ export const bankAccounts = [
   },
   { id: 2, name: "Morgan", balance: 1100.0, deposits: [1100] },
   {
+    
     id: 3,
     name: "Joshua",
     balance: 18456.57,
