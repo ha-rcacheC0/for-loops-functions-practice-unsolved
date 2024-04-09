@@ -6,8 +6,13 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-  let greatsBalance = [];
-
+  let bigAccount = array[0];
+  for (let item of array) {
+    if (item['balance'] > bigAccount.balance) {
+      bigAccount = item;
+    }
+  }
+  return [bigAccount];
 }
 
 
