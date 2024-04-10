@@ -6,7 +6,18 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  let newArray = [];
+  for (let draw of array) {
+    if (draw.withdrawals) {
+      let newNum = 0;
+      for (let bal of draw.withdrawals) {
+        newNum += Number(bal);
+      } newArray.push(newNum);
+    } else {
+      newArray.push(0);
+    }
+  }
+  return newArray;
 }
 
 // === TEST YOURSELF ===
