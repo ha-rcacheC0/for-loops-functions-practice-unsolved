@@ -7,7 +7,8 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  let flat = array.flat();
+  return flat;
 }
 
 
