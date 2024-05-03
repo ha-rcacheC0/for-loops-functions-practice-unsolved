@@ -7,7 +7,20 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  let newArr = [[],[]];
+  
+ for (let i = 0; i < array.length; i++) {
+  let arr1 = array[i];
+  let a = false;
+  for (let j = 0; j < arr1.length; j++) {
+    if (arr1[j] === 'a') {
+      a = true;
+    }
+  }
+  let index = a ? 0 : 1;
+  newArr[index].push(arr1);
+ }
+ return newArr;
 }
 
 
