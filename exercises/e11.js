@@ -6,18 +6,18 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-  let newArray = [];
-  for (let draw of array) {
-    if (draw.withdrawals) {
-      let newNum = 0;
-      for (let bal of draw.withdrawals) {
-        newNum += Number(bal);
-      } newArray.push(newNum);
-    } else {
-      newArray.push(0);
+  let withdrawalSums = [];
+  
+  for (let i = 0; i < array.length; i++) {
+    let withdrawalTotal = 0; // the key is putting 0 here so the function resets to 0 every brand new time the loop iterates within this scope
+    let withdrawals = array[i].withdrawals || []; // this ensures the second step so if withdrawals don't exist we return 0 hence necessary to declare withdrawalTotal
+
+    for (let x = 0; x < withdrawals.length; x++) { // this loops through withdrawals
+      withdrawalTotal += withdrawals[x]; // notice grabbing each withdrawal at each index and adding it to the withdrawalTotal each time
     }
+    withdrawalSums.push(withdrawalTotal); // once the loop above is done running and we have a total then can we push the total value back into the array
   }
-  return newArray;
+  return withdrawalSums; // now returning a single value. 0 immediately if it does not exist or the total then push.
 }
 
 // === TEST YOURSELF ===

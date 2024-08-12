@@ -17,7 +17,7 @@ export function getClientsWithLetterInName(array, letter) {
       }
     }
   }
-  return letterInName; // return an array containing the names after matching the letters
+  return letterInName; // returns an array containing the names after matching the letters
 }
 
 // === TEST YOURSELF ===
