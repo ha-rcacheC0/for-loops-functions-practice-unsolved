@@ -9,8 +9,13 @@ export function getClientsWithBalanceOverOneHundred(array) {
   let over100 = [];
 
   for (let i = 0; i < array.length; i++) {
-    let account = array[0];
+    let account = array[i];
+
+    if (account.balance > 100) {
+      over100.push(account);
+    }
   }
+  return over100;
 }
 
 
