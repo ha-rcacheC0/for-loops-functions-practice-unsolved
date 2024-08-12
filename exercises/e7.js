@@ -12,6 +12,7 @@ export function getClientWithLeastPositiveBalance(array) {
 
   for (let i = 0; i < array.length; i++) {
     let account = array[i];
+    
     if (account.balance > 0 && account.balance < minBalance) {
       minBalance = account.balance;
       minAccount = account;

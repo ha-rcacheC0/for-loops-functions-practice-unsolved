@@ -10,8 +10,10 @@ export function getClientWithNoMoney(array) {
   let noBalance = [];
 
   for (let i = 0; i < array.length; i++) {
-    if (array[i].balance == 0) {
-      noBalance.push(array[i].name);
+    let account = array[i];
+
+    if (account.balance == 0) {
+      noBalance.push(account.name);
     }
   }
   return noBalance;
