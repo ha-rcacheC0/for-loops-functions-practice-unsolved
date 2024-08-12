@@ -6,13 +6,15 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-  let bigAccount = array[0];
-  for (let item of array) {
-    if (item['balance'] > bigAccount.balance) {
-      bigAccount = item;
+  let biggestAccount = array[0];
+
+  for (let i = 1; i < array.length; i++) {
+    let account = array[i];
+    if (account.balance > biggestAccount.balance) {
+      biggestAccount = account;
     }
   }
-  return [bigAccount];
+  return [biggestAccount];
 }
 
 

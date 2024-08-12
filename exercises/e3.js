@@ -1,4 +1,3 @@
-
 // EXERCISE 3
 // Make sure to solve two parts beneath
 
@@ -10,12 +9,13 @@
 
 export function getAverage(array) {
   // Your code goes here...
-  let sum = 0;
+  let num = 0;
+
   for (let i = 0; i < array.length; i++) {
-    sum += array[i];
-  };
-  return sum/array.length;
-};
+    num += array[i];
+  }
+  return num / array.length;
+}
 
 
 /** 
@@ -27,15 +27,17 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-    let sum = 0;
-    for (let i = 0; i < str.length; i++) {
-      let parseChar = parseInt(str[i]);
-      if (!isNaN(parseChar)) {
-        sum += parseChar;
-      };
-    };
-    return sum;
-};
+  let num = 0;
+
+  for (let i = 0; i < str.length; i++) {
+  let parsed = parseInt(str[i]);
+
+    if (Number.isInteger(parsed)) {
+    num += parsed;
+    }
+  }
+  return num;
+}
 
 
 // === TEST YOURSELF ===
