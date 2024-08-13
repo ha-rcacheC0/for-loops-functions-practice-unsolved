@@ -6,7 +6,7 @@ export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
   let numbers = [];
   
-  for (let i = 0; i < max; i++) {
+  for (let i = 0; i <= max; i++) {
     if (Number.isInteger(Math.sqrt(i)) === true) {
       numbers.push(i);
     }

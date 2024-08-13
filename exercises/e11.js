@@ -9,11 +9,11 @@ export function getAllWithdrawals(array) {
   let withdrawalSums = [];
   
   for (let i = 0; i < array.length; i++) {
-    let withdrawalTotal = 0; // the key is putting 0 here so the function resets to 0 every brand new time the loop iterates within this scope
-    let withdrawals = array[i].withdrawals || []; // this ensures the second step so if withdrawals don't exist we return 0 hence necessary to declare withdrawalTotal
+    let withdrawalTotal = 0; // the key is putting 0 here and not above so the function resets to 0 every new account
+    let withdrawals = array[i].withdrawals || []; // this ensures the second step of the instructions so if withdrawals don't exist in an account we return 0 hence necessary to declare withdrawalTotal
 
     for (let x = 0; x < withdrawals.length; x++) { // this loops through withdrawals
-      withdrawalTotal += withdrawals[x]; // notice grabbing each withdrawal at each index and adding it to the withdrawalTotal each time
+      withdrawalTotal += withdrawals[x]; // notice grabbing each withdrawal at every index and adding it to the withdrawalTotal each time
     }
     withdrawalSums.push(withdrawalTotal); // once the loop above is done running and we have a total then can we push the total value back into the array
   }

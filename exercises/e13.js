@@ -10,21 +10,24 @@
 // ]
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
-  let depositSum = [];
+  let accountsArray = [];
 
-    for (const i of array) {
-        if (i.deposits) {
-          let sum = 0;
-          for (const num of i.deposits) {
-              sum += Number(num);
-          } if (sum < 2000) {
-              depositSum.push(i);
-          }
-        } else {
-          depositSum.push(i);
-        }    
+  for (let i = 0; i < array.length; i++) {
+    let account = array[i];
+    let depositsArray = account.deposits || []; // in case object doesn't contain deposits
+    let depositsTotal = 0;
+
+    for (let x = 0; x < depositsArray.length; x++) {
+      let deposit = depositsArray[x];
+      depositsTotal += deposit;
     }
-    return depositSum;
+
+    if (depositsTotal < 2000) {
+      accountsArray.push(account);
+    }
+  }
+
+  return accountsArray;
 }
 
 // === TEST YOURSELF ===
