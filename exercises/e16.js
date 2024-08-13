@@ -7,18 +7,20 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-  let result = [];
-    for (let i = 0; i < array.length; i++) {
-        if (Array.isArray(array[i])) {
-            let flattened = flatArrays(array[i]);
-            for (let j = 0; j < flattened.length; j++) {
-                result.push(flattened[j]);
-            }
-        } else {
-            result.push(array[i]);
-            }
+  let flat = [];
+
+  for (let i = 0; i < array.length; i++) {
+    let arr = array[i];
+    if (Array.isArray(arr)) {
+      for (let x = 0; x < arr.length; x++) {
+        flat.push(arr[x]);
+      }
+    } else {
+      flat.push(arr);
     }
-    return result;
+  }
+
+  return flat;
 }
 
 
