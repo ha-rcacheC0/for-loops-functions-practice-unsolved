@@ -11,6 +11,7 @@ export function flatArrays(array) {
 
   for (let i = 0; i < array.length; i++) {
     let arr = array[i];
+
     if (Array.isArray(arr)) {
       for (let x = 0; x < arr.length; x++) {
         flat.push(arr[x]);

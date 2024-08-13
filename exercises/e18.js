@@ -5,15 +5,17 @@
 // NOTE: You can NOT use the array.join(), array.toString(), and array.replace() methods in your code
 
 export function joinToString(array, separator) {
+  // Your code goes here
+  let joined = "";
 
-  let arr = '';
-    for (let i = 0; i < array.length; i++) {
-        arr += array[i];
-        if (i < array.length - 1) {
-            arr += separator;
-        }
+  for (let i = 0; i < array.length; i++) {
+    joined += array[i];
+    if (i < array.length - 1) {
+      joined += separator;
     }
-    return arr;
+  }
+
+  return joined;
 }
 
 // === TEST YOURSELF ===
